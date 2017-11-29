@@ -29,14 +29,14 @@ class Song
   def self.genre_count
     genre_hash = {}
     @@genres.each do |genre|
-      if !genre_hash.include?(genre)
+      if !genre_hash.has_key?(genre)
         genre_hash.merge! (genre: 1)
       else
         genre_hash[genre] += 1
       end
     end
   end
-  
+
 
 
 
