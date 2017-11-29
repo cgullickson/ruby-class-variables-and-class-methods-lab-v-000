@@ -30,8 +30,7 @@ class Song
     genre_hash = {}
     @@genres.each do |genre|
       if !genre_hash.include?(genre)
-        genre_hash[genre] = []
-        genre_hash[genre] = [1]
+        genre_hash.merge! (genre: 1)
       else
         genre_hash[genre] += 1
       end
