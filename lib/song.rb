@@ -19,7 +19,7 @@ class Song
   end
 
   def self.artists
-    @@count.uniq
+    @@count && @@count
   end
 
 end
